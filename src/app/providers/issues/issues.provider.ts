@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Api } from '../api/api';
 
 @Injectable()
-export class Items {
+export class Issues {
  private route = 'repos/angular/angular.js/issues';
   constructor(public api: Api) {  }
 
