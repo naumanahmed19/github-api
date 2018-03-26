@@ -9,13 +9,20 @@ import { Issues } from './providers/issues/issues.provider';
 export class AppComponent {
   title = 'app';
   issuesList: any[] = [];
+  repo: any[] = [];
   constructor(private issues: Issues){
+    this.getRepoInfo();
     this.getIssues();
   }
   getIssues()
   {
-    this.issues.query().subscribe((resp:any) => {
+    this.issues.fetchIssues('issues').subscribe((resp:any) => {
       this.issuesList = resp;
+    });
+  }
+  getRepoInfo(){
+    this.issues.fetchRepo().subscribe((resp:any) => {
+      this.repo = resp;
     });
   }
 }

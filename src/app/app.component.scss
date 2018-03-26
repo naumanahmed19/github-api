@@ -1,0 +1,28 @@
+
+$boder-color: #e1e4e8;
+$background-color:  #f6f8fa;
+
+    .container{
+        max-width: 980px;
+        margin: 0 auto;
+        a{
+            text-decoration: none;
+            color: #494949;
+        }
+        h2{
+            font-size: 16px;
+        }
+        ul{
+          border-radius: 2px;
+          border:1px solid $boder-color;
+            li{
+                padding: 10px;
+                display: block;
+                list-style: none;
+                border-top:1px solid $boder-color;
+                &:hover, &:focus{
+                    background-color: $background-color;
+                }
+            }
+        }
+    }
