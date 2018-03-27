@@ -1,17 +1,41 @@
 
 $boder-color: #e1e4e8;
 $background-color:  #f6f8fa;
-
 ul{
     border-radius: 2px;
     border:1px solid $boder-color;
         li{
+            &:first-child{
+                background-color: $background-color;
+                border-top: none;
+            }
             padding: 10px;
             display: block;
             list-style: none;
             border-top:1px solid $boder-color;
+            a{
+                color: #24292e;
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 1.6;
+                &:hover, &:focus{
+                    color: #0366d6;
+                }
+            }
             &:hover, &:focus{
                 background-color: $background-color;
+            }
+            .tag{
+                border-radius: 2px;
+                color:#fff;
+                margin-right: 5px;
+                padding: 0 6px;
+                font-size: 12px;
+                display: inline-block;
+            }
+            .opened_by{
+                color:#586069;
+                font-size: 12px;
             }
         }
     }

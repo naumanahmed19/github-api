@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IssueDetailComponent } from './components/issue-detail/issue-detail.component';
 import { routes } from './app.routes';
 import { IssuesComponent } from './components/issues/issues.component';
+import { RelativeTime } from './pipes/relative-time';
 
 
 
@@ -14,7 +15,8 @@ import { IssuesComponent } from './components/issues/issues.component';
   declarations: [
     AppComponent,
     IssueDetailComponent,
-    IssuesComponent
+    IssuesComponent,
+    RelativeTime
   ],
   imports: [
     routes,
