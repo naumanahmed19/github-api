@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IssueDetailComponent } from './issue-detail.component';
+import { ActivatedRoute ,Data } from '@angular/router';
+import { Api,Issues } from '../../providers/providers';
 
 describe('IssueDetailComponent', () => {
   let component: IssueDetailComponent;
@@ -8,7 +11,23 @@ describe('IssueDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IssueDetailComponent ]
+      declarations: [ IssueDetailComponent ],
+      imports: [
+        HttpClientTestingModule,
+      ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            data: {
+              subscribe: (fn: (value: Data) => void) => fn({
+                number: '1234'
+              })
+            }
+          }
+        },
+        Api,Issues
+      ],
     })
     .compileComponents();
   }));
