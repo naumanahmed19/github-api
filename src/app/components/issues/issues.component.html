@@ -1,0 +1,7 @@
+<ul>
+  <li>Open Issues: {{repo.open_issues_count}}</li>
+  <li *ngFor="let issue of issuesList">
+    <h2><a routerLink='/issue/{{issue.number}}'>{{issue.title}}</a></h2>
+    <span *ngFor="let label of issue.labels">{{label.name}}</span>
+  </li>
+</ul>

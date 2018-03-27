@@ -1,17 +1,3 @@
-
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <div style="text-align:center">
-    <h1>
-      Issues List
-    </h1>
-   </div>
-  <ul>
-    <li>Open Issues: {{repo.open_issues_count}}</li>
-    
-    <li *ngFor="let issue of issuesList">
-      <h2><a target="_blank" rel="noopener" href="{{issue.url}}">{{issue.title}}</a></h2>
-      <span *ngFor="let label of issue.labels">{{label.name}}</span>
-    </li>
-  </ul>
+  <router-outlet></router-outlet>
 </div>

@@ -13,4 +13,11 @@ export class Issues {
   fetchRepo(params?: any) {
     return this.api.get(this.route, params);
   }
+
+  fetchSingleIssue($number:number,params?: any) {
+    return this.api.get(this.route +'/issues/'+ $number , params);
+  }
+
+
+
 }
